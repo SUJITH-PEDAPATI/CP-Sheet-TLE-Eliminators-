@@ -1,21 +1,16 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <climits>
-
 using namespace std;
-
-int main () {
-
+int main() {
     int t;
     cin >> t;
-
-    while ( t-- ){
-        int n,k;
+    while (t--) {
+        long long n, k;
         cin >> n >> k;
-        bool condition = true;
-        if (n % 2 == 0 || (k % 2 == 1 && n >= k))cout << "YES" << endl;
-        else cout << "NO" << endl;
+        if (n % 2 == 0)
+            cout << "YES\n";
+        else if (k % 2 == 1 && k <= n)
+            cout << "YES\n";
+        else
+            cout << "NO\n";
     }
-    
 }
